@@ -76,17 +76,24 @@ section {
 .bio-section img {
     width: 200px;
     margin-right: 20px;
+    max-height: 283px;
 }
 
 .bio-text {
     display: flex;
     flex-direction: column;
+    justify-content: end;
 }
 
+
 .bio-text p {
-    width: 50%;
+   width: 50%;
 }
 
 .project-card img{
     max-width: 500px;
+}
+
+footer {
+    padding: 0 60px;
 }
