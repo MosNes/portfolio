@@ -1,0 +1,29 @@
+/* Color scheme created by Davina Chai on color.adobe.com */
+/* Color Theme Swatches in Hex */
+.Coral-Teal-Gray-1-hex { color: #FF5F5D; }
+.Coral-Teal-Gray-2-hex { color: #3F7C85; }
+.Coral-Teal-Gray-3-hex { color: #00CCBF; }
+.Coral-Teal-Gray-4-hex { color: #72F2EB; }
+.Coral-Teal-Gray-5-hex { color: #747E7E; }
+
+/* Color Theme Swatches in RGBA */
+.Coral-Teal-Gray-1-rgba { color: rgba(255, 94, 93, 1); }
+.Coral-Teal-Gray-2-rgba { color: rgba(63, 124, 133, 1); }
+.Coral-Teal-Gray-3-rgba { color: rgba(0, 204, 191, 1); }
+.Coral-Teal-Gray-4-rgba { color: rgba(114, 242, 235, 1); }
+.Coral-Teal-Gray-5-rgba { color: rgba(116, 126, 126, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Coral-Teal-Gray-1-hsla { color: hsla(0, 100, 68, 1); }
+.Coral-Teal-Gray-2-hsla { color: hsla(187, 35, 38, 1); }
+.Coral-Teal-Gray-3-hsla { color: hsla(176, 100, 40, 1); }
+.Coral-Teal-Gray-4-hsla { color: hsla(176, 83, 69, 1); }
+.Coral-Teal-Gray-5-hsla { color: hsla(180, 4, 47, 1); }
+
+:root {
+    --primary-background-color: rgb(55, 61, 61);
+    --primary-color: rgba(63, 124, 133, 1);
+    --secondary-color: rgba(0, 204, 191, 1);
+    --tertiary-color: rgba(114, 242, 235, 1);
+    --splash-color: rgba(255, 94, 93, 1);
+}
