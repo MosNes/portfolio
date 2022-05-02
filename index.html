@@ -8,8 +8,18 @@
     </head>
 
     <body>
+
+        <div id="sidebar_toggle">
+            <input name="toggle" type="checkbox" onclick="document.getElementsByClassName('main-sidebar')[0].classList.toggle('expanded')"/>
+            <label for="toggle">
+                <span>menu</span>
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </div>
         
-        <header class="main-sidebar">
+        <div class="main-sidebar">
             
             <img src="./assets/images/Sidebar-Logo.jpg" alt="J. Moses Nester's logo, a stylized letter N"/>
             
@@ -27,7 +37,7 @@
                     </li>
                 </ul>
             </nav>
-        </header>
+        </div>
         
         <div class="main-page">
             <section class="hero">

@@ -1,4 +1,5 @@
-/* Color scheme created by Davina Chai on color.adobe.com */
+/* Color scheme created by Davina Chai on color.adobe.com
+used as initial inspiration, then edited by me */
 /* Color Theme Swatches in Hex */
 .Coral-Teal-Gray-1-hex { color: #FF5F5D; }
 .Coral-Teal-Gray-2-hex { color: #3F7C85; }
@@ -21,9 +22,10 @@
 .Coral-Teal-Gray-5-hsla { color: hsla(180, 4, 47, 1); }
 
 :root {
-    --primary-background-color: rgb(55, 61, 61);
+    --primary-background-color: rgba(55, 61, 61, 1);
+    --dark-splash-color: rgba(26,87,106,1);
     --primary-color: rgba(63, 124, 133, 1);
-    --secondary-color: rgba(0, 204, 191, 1);
+    --secondary-color: rgba(102, 200, 211, 1);
     --tertiary-color: rgba(114, 242, 235, 1);
     --splash-color: rgba(255, 94, 93, 1);
 }
@@ -37,8 +39,9 @@
 body {
     background-color: var(--primary-background-color);
     font-family: Calibri, 'Gill Sans','Trebuchet MS', sans-serif;
-    color:#00CCBF;
+    color:var(--secondary-color);
     display: flex;
+    position:relative;
 }
 
 a {
@@ -50,6 +53,53 @@ section {
     padding:60px;
 }
 
+#sidebar_toggle {
+    position:fixed;
+    z-index:999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#sidebar_toggle input {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:20px;
+    left: 15px;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1000;
+    -webkit-touch-callout: none;
+}
+
+#sidebar_toggle label {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    left: 15px;
+}
+
+#sidebar_toggle label span {
+    display:none;
+}
+
+#sidebar_toggle label div {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    position: relative;
+    background: var(--tertiary-color);
+    border-radius: 3px;
+    z-index: 999;
+}
+
 .hero {
     background-image: url("../images/Banner_Illustration.jpg");
     background-size: cover;
@@ -58,14 +108,25 @@ section {
 }
 
 .main-sidebar {
-    display: flex;
-    flex-direction:column;
-    width: 10%;
-    min-width: 200px;
-    background-color: #00CCBF;
+    max-width: 0;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
     }
 
+.main-sidebar.expanded {
+    display: flex;
+    flex-direction:column;
+    max-width: 200px;
+    background-color: var(--secondary-color);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
 .main-sidebar img {
+    margin-top: 40px;
     object-fit: scale-down;
 }
 
