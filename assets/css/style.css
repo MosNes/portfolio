@@ -27,3 +27,43 @@
     --tertiary-color: rgba(114, 242, 235, 1);
     --splash-color: rgba(255, 94, 93, 1);
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-background-color);
+    font-family: Calibri, 'Gill Sans','Trebuchet MS', sans-serif;
+    color:#00CCBF;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+section {
+    padding:60px;
+}
+
+.hero {
+    background-image: url("../images/Banner_Illustration.jpg");
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+}
+
+.main-sidebar {
+    display: flex;
+    flex-direction:column;
+    width: 25%;
+    background-color: #00CCBF;
+    }
+
+.main-sidebar img {
+    object-fit: scale-down;
+}
