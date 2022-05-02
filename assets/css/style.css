@@ -60,10 +60,33 @@ section {
 .main-sidebar {
     display: flex;
     flex-direction:column;
-    width: 25%;
+    width: 10%;
+    min-width: 200px;
     background-color: #00CCBF;
     }
 
 .main-sidebar img {
     object-fit: scale-down;
+}
+
+.bio-section {
+    display: flex;
+}
+
+.bio-section img {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.bio-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-text p {
+    width: 50%;
+}
+
+.project-card img{
+    max-width: 500px;
 }
