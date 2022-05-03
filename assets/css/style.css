@@ -103,8 +103,9 @@ section {
 .hero {
     background-image: url("../images/Banner_Illustration.jpg");
     background-size: cover;
-    background-position: center;
-    height: fit-content;
+    background-position: bottom;
+    max-width: 100%;
+    min-height: 500px;
 }
 
 .main-sidebar {
@@ -151,8 +152,24 @@ section {
    width: 50%;
 }
 
-.project-card img{
+.project-section {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.project-card {
+    flex: 1 50%;
+}
+
+.project-card img {
     max-width: 500px;
+
+}
+
+.project-section :first-child {
+    flex: 2 100%;
 }
 
 footer {
