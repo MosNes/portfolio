@@ -117,7 +117,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    /* background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5) 25%,rgba(0,0,0,.5) 75%,rgba(0,0,0,0)100%); */
     width: 100%;
 }
 
@@ -280,6 +280,10 @@ footer address a :hover {
 
 /* Formatting for tablets and smaller */
 @media screen and (max-width: 768px) {
+
+    .title-bar h1 {
+        font-size: 50px;
+    }
     
     .project-section :first-child img {
         min-width: 400px;
@@ -294,6 +298,8 @@ footer address a :hover {
 
 /* Formatting for smartphones and smaller*/
 @media screen and (max-width: 575px) {
+
+    
 
     .project-section :first-child img {
         min-width: 350px;
