@@ -200,12 +200,18 @@ section {
 }
 
 .project-section :first-child img {
-    min-width: 1000px;
+    min-width: 800px;
     flex-basis: 100%;
 }
 
+.project-section :first-child h2 {
+    margin-bottom: 50px;
+}
+
+
 .project-card h2 {
     margin-top: 25px;
+    margin-bottom: 35px;
 }
 
 .project-card img {
@@ -220,6 +226,36 @@ footer {
     margin-bottom: 30px;
 }
 
-@media screen {
+/* Formatting small desktop screens and smaller */
+@media screen and (max-width: 980px) {
+
+    section {
+        padding: 30px;
+    }
+
+    
+    .bio-section article {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .project-section :first-child img {
+        min-width: 500px;
+        flex-basis: 100%;
+    }
+
+    .project-card img {
+        max-width: 250px;
+    }
+    
+}
+
+/* Formatting for tablets and smaller */
+@media screen and (max-width: 768px) {
+    
+}
+
+/* Formatting for smartphones and smaller*/
+@media screen and (max-width: 575px) {
     
 }
