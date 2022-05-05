@@ -254,6 +254,10 @@ section {
     flex-basis: 100%;
 }
 
+.project-card a:hover {
+    color: var(--splash-color);
+}
+
 footer {
     display: flex;
     justify-content: center;
