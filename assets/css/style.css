@@ -221,18 +221,8 @@ section {
     box-shadow: 0 0 7px black;
 }
 
-.project-section :first-child {
-    flex: 1 100%;
-    padding: 20px;
-}
-
-.project-section :first-child h2 {
-    font-size: 30px;
-}
-
-.project-section :first-child img {
-    min-width: 800px;
-    flex-basis: 100%;
+.project-card img {
+    max-width: 500px;
 }
 
 .project-card h2 {
@@ -240,10 +230,19 @@ section {
     margin-bottom: 10px;
 }
 
-.project-card img {
-    max-width: 500px;
+.project-section .project-card:first-child {
+    flex: 1 100%;
+    padding: 20px;
 }
-    
+
+.project-section .project-card:first-child h2{
+    font-size: 30px;
+}
+
+.project-section .project-card:first-child img{
+    min-width: 800px;
+    flex-basis: 100%;
+}
 
 footer {
     padding: 0 60px;
@@ -281,7 +280,7 @@ footer address a:hover {
         margin-bottom: 5px;
     }
 
-    .project-section :first-child img {
+    .project-section .project-card:first-child img{
         min-width: 500px;
         flex-basis: 100%;
     }
@@ -299,16 +298,16 @@ footer address a:hover {
         font-size: 50px;
     }
 
-    .project-section :first-child {
+    .project-section .project-card:first-child {
         padding: 10px;
     }
     
-    .project-section :first-child img {
+    .project-section .project-card:first-child img{
         min-width: 400px;
         flex-basis: 100%;
     }
 
-    .project-section :first-child h2 {
+    .project-section .project-card:first-child h2{
         font-size: 30px;
     }
 
@@ -323,12 +322,12 @@ footer address a:hover {
 
     
 
-    .project-section :first-child img {
+    .project-section .project-card:first-child img{
         min-width: 350px;
         flex-basis: 100%;
     }
 
-    .project-section :first-child h2 {
+    .project-section .project-card:first-child h2{
         font-size: 25px;
     }
 
