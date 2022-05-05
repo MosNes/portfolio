@@ -230,6 +230,8 @@ section {
     margin-bottom: 10px;
 }
 
+
+/* apparently you have to specify the container and the name of the first-child container to use :first-child correctly */
 .project-section .project-card:first-child {
     flex: 1 100%;
     padding: 20px;
