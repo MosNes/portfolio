@@ -144,6 +144,7 @@ section {
     max-width: 200px;
     background-color: var(--secondary-color);
     height: 100%;
+    box-shadow: 0 0 7px black;
     /* -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s; */
@@ -171,6 +172,8 @@ section {
     background:rgba(63, 124, 133, 1);
     border-radius: 15px;
     width: 80%;
+    margin: 3px;
+    box-shadow: 0 0 7px black;
 }
 
 .main-sidebar nav ul li:hover {
@@ -197,12 +200,14 @@ section {
 .bio-section article img {
     width: 200px;
     max-height: 283px;
+    box-shadow: 0 0 7px black;
 }
 
 .project-section {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 25px;
 }
 
 .project-card {
@@ -211,12 +216,15 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 35px;
-    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #747E7E;
+    box-shadow: 0 0 7px black;
 }
 
 .project-section :first-child {
+    font-size: 30px;
     flex: 1 100%;
+    padding: 20px;
 }
 
 .project-section :first-child img {
@@ -224,14 +232,9 @@ section {
     flex-basis: 100%;
 }
 
-.project-section :first-child h2 {
-    margin-bottom: 50px;
-}
-
-
 .project-card h2 {
-    margin-top: 25px;
-    margin-bottom: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .project-card img {
@@ -246,7 +249,15 @@ footer {
     margin-bottom: 30px;
 }
 
-footer address a :hover {
+footer h2 {
+    margin-bottom:15px;
+}
+footer address {
+    font-size: 16px;
+    font-style: normal;
+}
+
+footer address a:hover {
     color:#FF5F5D;
 }
 
@@ -284,10 +295,18 @@ footer address a :hover {
     .title-bar h1 {
         font-size: 50px;
     }
+
+    .project-section :first-child {
+        padding: 10px;
+    }
     
     .project-section :first-child img {
         min-width: 400px;
         flex-basis: 100%;
+    }
+
+    .project-section :first-child h2 {
+        font-size: 30px;
     }
 
     .project-card img {
