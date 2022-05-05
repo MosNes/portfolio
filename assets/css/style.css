@@ -222,9 +222,12 @@ section {
 }
 
 .project-section :first-child {
-    font-size: 30px;
     flex: 1 100%;
     padding: 20px;
+}
+
+.project-section :first-child h2 {
+    font-size: 30px;
 }
 
 .project-section :first-child img {
