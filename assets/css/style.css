@@ -104,26 +104,29 @@ section {
     background-image: url("../images/Banner_Illustration.jpg");
     background-size: cover;
     background-position: bottom;
+    background-attachment: fixed;
     max-width: 100%;
-    min-height: 500px;
+    min-height: 600px;
 }
 
 .main-sidebar {
     max-width: 0;
     overflow: hidden;
-    -webkit-transition: all .3s;
+    /* -webkit-transition: all .3s;
     -o-transition: all .3s;
-    transition: all .3s;
+    transition: all .3s; */
     }
 
 .main-sidebar.expanded {
+    position: fixed;
     display: flex;
     flex-direction:column;
     max-width: 200px;
     background-color: var(--secondary-color);
-    -webkit-transition: all .3s;
+    height: 100%;
+    /* -webkit-transition: all .3s;
     -o-transition: all .3s;
-    transition: all .3s;
+    transition: all .3s; */
 }
 
 .main-sidebar img {
@@ -131,25 +134,49 @@ section {
     object-fit: scale-down;
 }
 
+.main-sidebar nav ul {
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.main-sidebar nav ul li {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background:rgba(63, 124, 133, 1);
+    border-radius: 15px;
+    width: 80%;
+}
+
+.main-sidebar nav ul li:hover {
+    background: #FF5F5D;
+}
+
+.main-sidebar nav ul li:hover a {
+    color: white;
+}
+
 .bio-section {
     display: flex;
+    justify-content: center;
 }
 
-.bio-section img {
-    width: 200px;
-    margin-right: 20px;
-    max-height: 283px;
-}
-
-.bio-text {
+.bio-section article {
+    gap: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: center;
+    align-items: end;
+    width: 50%;
 }
 
-
-.bio-text p {
-   width: 50%;
+.bio-section article img {
+    width: 200px;
+    max-height: 283px;
 }
 
 .project-section {
@@ -188,4 +215,11 @@ section {
 
 footer {
     padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+@media screen {
+    
 }
