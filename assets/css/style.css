@@ -53,6 +53,13 @@ section {
     padding:60px;
 }
 
+.border-line {
+    border-bottom: 5px solid var(--splash-color);
+    max-width: 50%;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
 #sidebar_toggle {
     position:fixed;
     z-index:999;
@@ -104,26 +111,50 @@ section {
     background-image: url("../images/Banner_Illustration.jpg");
     background-size: cover;
     background-position: bottom;
+    background-attachment: fixed;
     max-width: 100%;
-    min-height: 500px;
+    min-height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
+
+.title-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5) 25%,rgba(0,0,0,.5) 75%,rgba(0,0,0,0)100%); */
+    width: 100%;
+}
+
+.title-bar h1 {
+    color: white;
+    font-size: 100px;
+    border-bottom: 5px solid var(--splash-color) ;
+    text-shadow: 0 0 7px black;    
+}
+
 
 .main-sidebar {
     max-width: 0;
     overflow: hidden;
-    -webkit-transition: all .3s;
+    /* -webkit-transition: all .3s;
     -o-transition: all .3s;
-    transition: all .3s;
+    transition: all .3s; */
     }
 
 .main-sidebar.expanded {
+    position: fixed;
     display: flex;
     flex-direction:column;
     max-width: 200px;
     background-color: var(--secondary-color);
-    -webkit-transition: all .3s;
+    height: 100%;
+    box-shadow: 0 0 7px black;
+    /* -webkit-transition: all .3s;
     -o-transition: all .3s;
-    transition: all .3s;
+    transition: all .3s; */
 }
 
 .main-sidebar img {
@@ -131,31 +162,60 @@ section {
     object-fit: scale-down;
 }
 
+.main-sidebar nav ul {
+    /* padding: 10px; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.main-sidebar nav ul li {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background:rgba(63, 124, 133, 1);
+    /* border-radius: 15px; */
+    width: 100%;
+    margin: 3px;
+    /* box-shadow: 0 0 7px black; */
+}
+
+.main-sidebar nav ul li:hover {
+    background: #FF5F5D;
+}
+
+.main-sidebar nav ul li:hover a {
+    color: white;
+}
+
 .bio-section {
     display: flex;
+    justify-content: center;
 }
 
-.bio-section img {
-    width: 200px;
-    margin-right: 20px;
-    max-height: 283px;
-}
-
-.bio-text {
+.bio-section article {
+    gap: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: center;
+    align-items: end;
+    width: 50%;
 }
 
-
-.bio-text p {
-   width: 50%;
+.bio-section article img {
+    width: 200px;
+    max-height: 283px;
+    box-shadow: 0 0 7px black;
 }
 
 .project-section {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 25px;
 }
 
 .project-card {
@@ -164,28 +224,140 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 35px;
-    margin-bottom: 25px;
-}
-
-.project-section :first-child {
-    flex: 1 100%;
-}
-
-.project-section :first-child img {
-    min-width: 1000px;
-    flex-basis: 100%;
-}
-
-.project-card h2 {
-    margin-top: 25px;
+    padding: 10px;
+    background-color: #747E7E;
+    box-shadow: 0 0 7px black;
 }
 
 .project-card img {
     max-width: 500px;
 }
-    
+
+.project-card h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* apparently you have to specify the container and the name of the first-child container to use :first-child correctly */
+.project-section .project-card:first-child {
+    flex: 1 100%;
+    padding: 20px;
+}
+
+.project-section .project-card:first-child h2{
+    font-size: 30px;
+}
+
+.project-section .project-card:first-child img{
+    min-width: 800px;
+    flex-basis: 100%;
+}
+
+.project-card a:hover {
+    color: var(--splash-color);
+}
 
 footer {
-    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+footer div {
+    width: fit-content;
+    border-top: 5px solid var(--splash-color);
+    border-bottom: 5px solid var(--splash-color);
+    padding: 20px 20px;
+}
+
+footer h2 {
+    margin-bottom:15px;
+}
+footer address {
+    font-size: 16px;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+footer address a:hover {
+    color:var(--splash-color);
+}
+
+/* Formatting small desktop screens and smaller */
+@media screen and (max-width: 980px) {
+
+    section {
+        padding: 30px;
+    }
+    
+    .bio-section article {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .bio-section article h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .project-section .project-card:first-child img{
+        min-width: 500px;
+        flex-basis: 100%;
+    }
+
+    .project-card img {
+        max-width: 250px;
+    }
+    
+}
+
+/* Formatting for tablets and smaller */
+@media screen and (max-width: 768px) {
+
+    .title-bar h1 {
+        font-size: 50px;
+    }
+
+    .project-section .project-card:first-child {
+        padding: 10px;
+    }
+    
+    .project-section .project-card:first-child img{
+        min-width: 400px;
+        flex-basis: 100%;
+    }
+
+    .project-section .project-card:first-child h2{
+        font-size: 30px;
+    }
+
+    .project-card img {
+        max-width: 250px;
+    }
+
+}
+
+/* Formatting for smartphones and smaller*/
+@media screen and (max-width: 575px) {
+
+    
+
+    .project-section .project-card:first-child img{
+        min-width: 350px;
+        flex-basis: 100%;
+    }
+
+    .project-section .project-card:first-child h2{
+        font-size: 25px;
+    }
+
+
+    .project-card img {
+        max-width: 200px;
+    }
+    
+    .project-card h2 {
+        font-size: 20px;
+    }
 }
